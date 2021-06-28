@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    font-size: 62.5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.homePage{
+    text-align: center;
+    padding: 2rem 0rem;
+}
+.homePage h1{
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+.homePage input{
+    font-size: 1.6rem;
+    padding:.6rem 1.5rem;
+    width: 70%;
+    text-align: center;
+    border: 1px solid red;
+    border-radius: .5rem;
+
+}
+.homePage button{
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    background-color: red;
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
+    border: 1px solid gray;
+    margin-top: 20px;
+    border-radius: .5rem;
+    transition: all .5s ease;
+}
+.homePage button:hover{
+    background-color: green;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.todoLIST{
+    width: 60%;
+    margin: 0 auto;
+
+   
+}
+.todoLIST .card{
+    padding: 1rem 2rem;
+    width: 100%;
+    background-color: rgba(224, 224, 224, 0.589);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    border-radius:.5rem;
+    position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.todoLIST .card p{
+    font-size: 1.4rem;
+}
+.todoLIST .card button{
+    padding: .5rem 0rem;
+    width: 100px;
+    background-color: red;
+    border: 1px solid transparent;
+    font-weight: bold;
+    color: white;
+}
+.todoLIST .card button:nth-of-type(1){
+    margin-right: 1rem;
+    background-color: green;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todoLIST .card:hover::before{
+    width: 100%;
+}
+
+.todoLIST .card::before{
+    content:"";
+    position: absolute;
+    border-radius: .5rem;
+    height: 100%;
+    width: 0px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .5s ease;
+    background-color: black;
+    
+
 }
