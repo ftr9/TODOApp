@@ -1,3 +1,6 @@
+# SIMPLE TODO APP(REACT JS)
+my first project after learning react js for two days
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
